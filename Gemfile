@@ -33,6 +33,8 @@ gem 'rubocop', '>= 1.0', '< 2.0'
 # devise gem for authentication
 gem 'devise'
 
+# cancancan gem for authorization
+gem 'cancancan'
 # rails ontroller spec
 gem 'rails-controller-testing'
 
