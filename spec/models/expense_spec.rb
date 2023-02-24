@@ -1,5 +1,4 @@
 require 'rails_helper'
-
 RSpec.describe Expense, type: :model do
   subject do
     @user = User.create!(name: 'alaa', email: 'alaa@alaa.com', password: 'password', id: 1)

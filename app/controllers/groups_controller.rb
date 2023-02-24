@@ -1,13 +1,12 @@
 class GroupsController < ApplicationController
   before_action :find_user
-  before_action :find_group, only: [:show, :edit, :update, :destroy]
+  before_action :find_group, only: %i[show edit update destroy]
 
   def index
     @groups = @user.groups.all
   end
 
-  def show
-  end
+  def show; end
 
   def new
     @group = Group.new
