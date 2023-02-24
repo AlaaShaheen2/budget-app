@@ -83,3 +83,6 @@ group :test do
   gem 'selenium-webdriver'
   gem 'webdrivers'
 end
+
+# kill n+1 queries
+gem 'bullet'
