@@ -43,3 +43,179 @@ body {
   overflow-x: hidden;
   background: var(--grey);
 }
+
+input {
+  border: none;
+  outline: none;
+  border-bottom: 1px solid var(--grey);
+  padding: 1rem;
+}
+
+input:focus {
+  border: 0.8px solid var(--blue);
+  transform: scale(1);
+}
+
+input::placeholder {
+  color: var(--grey3);
+  letter-spacing: 0.6px;
+}
+
+.flash-notice,
+.flash-alert {
+  padding: 1rem;
+  text-align: center;
+  color: var(--brown);
+  font-style: italic;
+  font-size: 1rem;
+}
+
+#error_explanation h2 {
+  text-align: center;
+  font-size: 1.1rem;
+  padding: 1rem;
+  font-style: italic;
+  font-weight: normal;
+}
+
+#error_explanation ul {
+  font-size: 0.9rem;
+  list-style-type: none;
+}
+
+.field_with_errors input {
+  width: 100%;
+}
+
+.links {
+  text-align: center;
+  font-style: italic;
+  padding: 2rem 0;
+  color: var(--blue);
+}
+
+.resend_instruction {
+  display: flex;
+  flex-direction: column;
+}
+
+.resend_instruction h1 {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.resend_instruction form {
+  display: flex;
+  flex-direction: column;
+}
+
+.resend_input {
+  margin: 1rem 0;
+}
+
+.actions {
+  background: var(--blue);
+  color: var(--white);
+  letter-spacing: 1px;
+}
+
+.spl_container {
+  display: grid;
+  grid-template-rows: 1fr 0fr;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.spl_container h1 {
+  font-size: 2.1rem;
+  text-align: center;
+}
+
+.spl_container h1 span:first-child {
+  color: var(--blue);
+}
+
+.spl_container h1 span:nth-child(2) {
+  color: var(--dark);
+}
+
+.spl_links {
+  text-align: center;
+  display: grid;
+  justify-content: center;
+  padding-bottom: 1rem;
+}
+
+.spl_links a {
+  width: 90vw;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  letter-spacing: 3px;
+  border-radius: 3px;
+}
+
+.spl-login {
+  background: var(--blue);
+  color: var(--white);
+}
+
+.spl-signup {
+  width: 90vw;
+  background: var(--grey2);
+  color: var(--dark);
+}
+
+.spl_links a:hover {
+  box-shadow: 3px 3px 4px 1px #0e0e0e82;
+  transform: scale(1);
+  transition: all 0.4s ease-in;
+}
+
+.top_bar {
+  width: 100%;
+  background: var(--blue);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  padding: 0 0.8rem;
+}
+
+.top_bar * {
+  border: none;
+  color: var(--grey);
+  background: transparent;
+  letter-spacing: 1px;
+}
+
+.back {
+  width: 1.3rem;
+  height: 1.3rem;
+}
+
+.top_bar h2 {
+  font-size: 1rem;
+  font-weight: normal;
+}
+
+.top_bar input {
+  padding: 0;
+}
+
+.signup_form,
+.login_form {
+  display: flex;
+  flex-direction: column;
+  padding: 1em 0;
+}
+
+.signup_form input:focus,
+.login_form input:focus {
+  box-shadow: 2px 2px 3px 1px var(--grey2);
+}
