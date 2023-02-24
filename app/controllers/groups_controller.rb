@@ -4,6 +4,10 @@ class GroupsController < ApplicationController
 
   def index
     @groups = @user.groups.all
+    # @groups_sum = {}
+    # @groups.each do |group|
+    #   @groups_sum[group.id] = group.expenses.sum(:amount)
+    # end
   end
 
   def show
@@ -37,7 +41,6 @@ class GroupsController < ApplicationController
   end
 
   def destroy
-    @group = Group.find(params[:id])
     @group_expenses = GroupExpense.where(group_id: @group.id)
     @group_expenses.each do |group_expense|
       expense_id = group_expense.expense_id
@@ -59,7 +62,12 @@ class GroupsController < ApplicationController
   end
 
   def find_group
-    @group = Group.find_by_id(params[:id])
+    begin
+      @group = Group.find(params[:id])
+    rescue ActiveRecord::RecordNotFound
+      flash[:alert] = 'Group not found!'
+      redirect_to not_found_index_path
+    end
   end
 
   def group_params
