@@ -3,8 +3,7 @@ class ExpensesController < ApplicationController
   before_action :find_group
   before_action :find_group_expenses
 
-  def index
-  end
+  def index; end
 
   def new
     @expense = Expense.new
@@ -21,7 +20,7 @@ class ExpensesController < ApplicationController
       render :new, status: 400
     end
   end
-  
+
   private
 
   def find_user
@@ -33,7 +32,7 @@ class ExpensesController < ApplicationController
   end
 
   def find_group_expenses
-    @group_expenses = GroupExpense.where({group_id: params[:group_id]})
+    @group_expenses = GroupExpense.where({ group_id: params[:group_id] })
   end
 
   def expense_params
