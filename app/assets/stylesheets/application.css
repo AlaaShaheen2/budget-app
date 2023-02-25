@@ -293,6 +293,8 @@ input::placeholder {
   margin: 0 0.5rem auto;
   border-radius: 3px;
   box-shadow: 2px 2px 3px var(--grey3), -1px 0 3px var(--grey3);
+  position: absolute;
+  bottom: 2px;
 }
 
 .add_btn:hover {
