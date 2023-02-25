@@ -1,18 +1,18 @@
 databases:
-  - name: bg-app-production
-    databaseName: bg_app_production
-    user: bg_app_production_user
+  - name: alaa
+    databaseName: alaa
+    user: alaa_user
 
 services:
-  - type: hesab-app
-    name: mysite
+  - type: web
+    name: alaahesab
     env: ruby
     buildCommand: "./bin/render-build.sh"
     startCommand: "bundle exec puma -C config/puma.rb"
     envVars:
       - key: DATABASE_URL
         fromDatabase:
-          name: bg_app_production
+          name: alaa
           property: connectionString
       - key: RAILS_MASTER_KEY
         sync: false
