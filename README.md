@@ -77,7 +77,7 @@
 
 ## 🚀 Project Description <a name="description"></a>
 
-- [Description](https://desc)
+- [Description](https://drive.google.com/file/d/1B55K7ErxzprmndKHPcJP7OThEV5wv_XH/view?usp=sharing)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
