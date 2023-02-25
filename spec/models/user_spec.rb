@@ -1,7 +1,8 @@
 require 'rails_helper'
+
 RSpec.describe User, type: :model do
   subject do
-    @user = User.create!(name: 'alaa', email: 'alaa@alaa.com', password: 'password', id: 1)
+    @user = User.create!(name: 'someone', email: 'user@user.com', password: 'password', id: 1)
   end
 
   before { subject.save }
@@ -21,7 +22,7 @@ RSpec.describe User, type: :model do
   end
 
   it 'name should have a correct value' do
-    expect(subject.name).to eql 'alaa'
+    expect(subject.name).to eql 'someone'
   end
 
   it 'email should be present' do
@@ -30,6 +31,6 @@ RSpec.describe User, type: :model do
   end
 
   it 'email should have a correct value' do
-    expect(subject.email).to eql 'alaa@alaa.com'
+    expect(subject.email).to eql 'user@user.com'
   end
 end

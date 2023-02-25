@@ -1,8 +1,9 @@
 require 'rails_helper'
+
 RSpec.describe Expense, type: :model do
   subject do
-    @user = User.create!(name: 'alaa', email: 'alaa@alaa.com', password: 'password', id: 1)
-    @expense = Expense.create(name: 'food', amount: 24.3, user: @user, user_id: 1, id: 1)
+    @user = User.create!(name: 'someone', email: 'user@user.com', password: 'password', id: 1)
+    @expense = Expense.create(name: 'stationary', amount: 10.1, user: @user, user_id: 1, id: 1)
   end
 
   before { subject.save }
