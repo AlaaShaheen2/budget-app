@@ -71,7 +71,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Hesab](https://budget-app-production-417a.up.railway.app/)
+- [Hesab](https://link.com)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
