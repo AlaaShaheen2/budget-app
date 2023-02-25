@@ -93,9 +93,9 @@ In order to run this project you need to:
 Clone this repository to your desired folder:
 
 ```sh
- git clone https://github.com/AlaaShaheen2/budget-app
+ git clone https://github.com/AlaaShaheen2/budget-app.git
 
-> Move inside the directory:
+Move inside the directory:
 
 ```
  cd budget-app
