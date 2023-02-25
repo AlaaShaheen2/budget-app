@@ -2,18 +2,13 @@ class GroupsController < ApplicationController
   load_and_authorize_resource
 
   before_action :find_user
-  before_action :find_group, only: [:show, :edit, :update, :destroy]
+  before_action :find_group, only: %i[show edit update destroy]
 
   def index
     @groups = @user.groups.all
-    # @groups_sum = {}
-    # @groups.each do |group|
-    #   @groups_sum[group.id] = group.expenses.sum(:amount)
-    # end
   end
 
-  def show
-  end
+  def show; end
 
   def new
     @group = Group.new
@@ -30,8 +25,7 @@ class GroupsController < ApplicationController
     end
   end
 
-  def edit
-  end
+  def edit; end
 
   def update
     if @group.update(group_params)
@@ -42,6 +36,7 @@ class GroupsController < ApplicationController
     end
   end
 
+  # rubocop:disable Lint/UselessAssignment
   def destroy
     if can? :edit, @group
       @group_expenses = GroupExpense.where(group_id: @group.id)
@@ -60,8 +55,8 @@ class GroupsController < ApplicationController
       flash[:alert] = 'Un Authorized'
       redirect_to groups_path
     end
-
   end
+  # rubocop:enable Lint/UselessAssignment
 
   private
 
@@ -70,12 +65,10 @@ class GroupsController < ApplicationController
   end
 
   def find_group
-    begin
-      @group = Group.find(params[:id])
-    rescue ActiveRecord::RecordNotFound
-      flash[:alert] = 'Group not found!'
-      redirect_to not_found_index_path
-    end
+    @group = Group.find(params[:id])
+  rescue ActiveRecord::RecordNotFound
+    flash[:alert] = 'Group not found!'
+    redirect_to not_found_index_path
   end
 
   def group_params

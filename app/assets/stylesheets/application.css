@@ -70,6 +70,20 @@ input::placeholder {
   font-size: 1rem;
 }
 
+.top_bar h2 {
+  font-size: 1rem;
+  font-weight: normal;
+}
+
+.group h2 {
+  color: #858a91db;
+  font-size: 1.1rem;
+}
+
+.group_detail_page h2 {
+  font-size: 1.4rem;
+}
+
 #error_explanation h2 {
   text-align: center;
   font-size: 1.1rem;
@@ -169,6 +183,21 @@ input::placeholder {
   color: var(--dark);
 }
 
+.list_btn a {
+  color: var(--grey2);
+}
+
+.not_found a {
+  font-size: 0.9rem;
+}
+
+.group > div,
+.group > div > a {
+  display: flex;
+  gap: 0.4rem;
+  align-items: center;
+}
+
 .spl_links a:hover {
   box-shadow: 3px 3px 4px 1px #0e0e0e82;
   transform: scale(1);
@@ -197,11 +226,6 @@ input::placeholder {
 .back {
   width: 1.1rem;
   height: 1.1rem;
-}
-
-.top_bar h2 {
-  font-size: 1rem;
-  font-weight: normal;
 }
 
 .top_bar input {
@@ -243,25 +267,19 @@ input::placeholder {
   box-shadow: 2px 2px 3px var(--grey3), -1px 0 3px var(--grey3);
 }
 
-.group > div,
-.group > div > a {
-  display: flex;
-  gap: 0.4rem;
-  align-items: center;
+.group_header > div {
+  width: 100%;
+  justify-content: space-between;
 }
 
 .group > div:last-child {
   align-self: flex-end;
 }
+
 .group p {
   font-size: 0.8rem;
   font-style: italic;
   color: var(--grey3);
-}
-
-.group h2 {
-  color: #858a91db;
-  font-size: 1.1rem;
 }
 
 .add_btn {
@@ -287,10 +305,6 @@ input::placeholder {
   background: var(--orange);
   border: none;
   border-radius: 3px;
-}
-
-.list_btn a {
-  color: var(--grey2);
 }
 
 .list_btn:hover {
@@ -321,10 +335,6 @@ input::placeholder {
   padding: 1.5rem;
   flex-direction: column;
   align-items: flex-start;
-}
-
-.group_detail_page h2 {
-  font-size: 1.4rem;
 }
 
 .list_btn_gen button {
@@ -398,18 +408,12 @@ form input[type="file"]::-webkit-file-upload-button {
   overflow: scroll;
 }
 
-.group_header > div {
-  width: 100%;
-  justify-content: space-between;
-}
-
 .header_name {
   display: flex;
   align-items: center;
   gap: 0.5rem;
 }
 
-.edit_add_page form input[type="text"],
 .edit_add_page form input[type="number"] {
   margin: 0.5rem 0;
 }
@@ -430,8 +434,4 @@ form input[type="file"]::-webkit-file-upload-button {
 
 .not_found .list_btn {
   padding: 0.8rem 1.3rem;
-}
-
-.not_found a {
-  font-size: 0.9rem;
 }
