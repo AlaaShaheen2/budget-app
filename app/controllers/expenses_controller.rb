@@ -1,5 +1,5 @@
 class ExpensesController < ApplicationController
-  load_and_authorize_resource
+  load_and_authorize_resource except: %i[show]
   before_action :find_user
   before_action :find_group
   before_action :find_group_expenses
@@ -75,7 +75,7 @@ class ExpensesController < ApplicationController
   end
 
   def find_group_expenses
-    @group_expenses = GroupExpense.where({group_id: params[:group_id]})
+    @group_expenses = GroupExpense.where({group_id: params[:group_id]}).order(created_at: :desc)
   end
  
   def find_expense
