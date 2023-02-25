@@ -25,7 +25,7 @@
 
 a {
   text-decoration: none;
-  color: inherit;
+  color: var(--grey2);
 }
 
 img {
@@ -105,6 +105,9 @@ input::placeholder {
   text-align: center;
   font-style: italic;
   padding: 2rem 0;
+}
+
+.links a {
   color: var(--blue);
 }
 
@@ -223,7 +226,7 @@ input::placeholder {
   letter-spacing: 1px;
 }
 
-.back {
+.svg {
   width: 1.1rem;
   height: 1.1rem;
 }

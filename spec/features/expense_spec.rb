@@ -3,14 +3,14 @@ require 'rails_helper'
 RSpec.describe 'Expenses Page', type: :system do
   describe 'Expenses /index' do
     before :each do
-      @user = User.create!(name: 'alaa', email: 'alaa@gmail.com', password: 'password')
+      @user = User.create!(name: 'name', email: 'email@gmail.com', password: 'password')
       @icon_file = fixture_file_upload(Rails.root.join('spec', 'fixtures', 'files', 'test.png'), 'image/png')
-      @group = Group.create(name: 'food', icon: @icon_file, user_id: @user.id)
-      @expense = Expense.create(name: 'cake', amount: 10.2)
+      @group = Group.create(name: 'stationary', icon: @icon_file, user_id: @user.id)
+      @expense = Expense.create(name: 'pen', amount: 10.2)
       @user.skip_confirmation!
       @user.save!
       visit new_user_session_path
-      fill_in 'user_email', with: 'alaa@gmail.com'
+      fill_in 'user_email', with: 'email@gmail.com'
       fill_in 'user_password', with: 'password'
       click_button 'Log in'
       sleep(2)
